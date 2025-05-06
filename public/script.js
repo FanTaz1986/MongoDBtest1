@@ -4,7 +4,7 @@ const carTableBody = document.querySelector('#carTable tbody');
 const carForm = document.getElementById('carForm');
 const messageDiv = document.getElementById('message');
 
-// Modal elements
+
 const editModal = document.getElementById('editModal');
 const closeModalBtn = document.getElementById('closeModal');
 const editCarForm = document.getElementById('editCarForm');
@@ -32,7 +32,7 @@ function renderCars(cars) {
         carTableBody.appendChild(tr);
     });
 
-    // Add event listeners for edit and delete buttons
+ 
     document.querySelectorAll('.edit-btn').forEach(btn => {
         btn.addEventListener('click', () => openEditModal(btn.dataset.id));
     });
@@ -78,7 +78,7 @@ carForm.addEventListener('submit', e => {
     .catch(() => showMessage('Failed to add car', true));
 });
 
-// Edit Modal Logic
+
 function openEditModal(id) {
     fetch(`${apiUrl}/${id}`)
         .then(res => res.json())
@@ -129,7 +129,7 @@ editCarForm.addEventListener('submit', function(e) {
     .catch(() => showMessage('Failed to update car', true));
 });
 
-// Delete Car
+
 function deleteCar(id) {
     if (!confirm('Are you sure you want to delete this car?')) return;
     fetch(`${apiUrl}/${id}`, {
@@ -147,5 +147,5 @@ function deleteCar(id) {
     .catch(() => showMessage('Failed to delete car', true));
 }
 
-// Initial fetch
+
 fetchCars();

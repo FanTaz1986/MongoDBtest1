@@ -17,7 +17,7 @@ router.post('/register', (req, res) => {
   res.json({ message: 'User registration endpoint (not implemented)' });
 });
 
-// Example: POST /users/login
+
 router.post('/login', (req, res) => {
   res.json({ message: 'User login endpoint (not implemented)' });
 });
