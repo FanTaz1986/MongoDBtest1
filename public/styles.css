@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+#car-form-container {
+    max-width: 500px;
+    margin: 0 auto 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+#carForm input, #carForm button,
+#editCarForm input, #editCarForm button {
+    padding: 8px;
+    margin: 5px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#carForm button, #editCarForm button {
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#carForm button:hover, #editCarForm button:hover {
+    background: #388e3c;
+}
+
+#message {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #388e3c;
+    font-weight: bold;
+}
+
+#carTable {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+#carTable th, #carTable td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#carTable th {
+    background: #f2f2f2;
+}
+
+.action-btn {
+    margin-right: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background: #2196F3;
+    color: #fff;
+}
+
+.delete-btn {
+    background: #f44336;
+    color: #fff;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 6px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

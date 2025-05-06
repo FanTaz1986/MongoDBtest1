@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Car List</h1>
+    <div id="car-form-container">
+        <form id="carForm">
+            <input type="text" id="brand" placeholder="Brand" required>
+            <input type="text" id="model" placeholder="Model" required>
+            <input type="number" id="year" placeholder="Year" required>
+            <input type="text" id="colors" placeholder="Colors (comma separated)">
+            <button type="submit">Add Car</button>
+        </form>
+    </div>
+    <div id="message"></div>
+    <table id="carTable">
+        <thead>
+            <tr>
+                <th>Brand</th>
+                <th>Model</th>
+                <th>Year</th>
+                <th>Colors</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Car rows will be inserted here -->
+        </tbody>
+    </table>
+    <div id="editModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h2>Edit Car</h2>
+            <form id="editCarForm">
+                <input type="hidden" id="editId">
+                <input type="text" id="editBrand" placeholder="Brand" required>
+                <input type="text" id="editModel" placeholder="Model" required>
+                <input type="number" id="editYear" placeholder="Year" required>
+                <input type="text" id="editColors" placeholder="Colors (comma separated)">
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
